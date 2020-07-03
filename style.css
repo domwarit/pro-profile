@@ -1,0 +1,333 @@
+/* The side navigation menu */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  list-style: none;
+}
+
+body{
+  background: #58d4ff;
+  color: #555555;
+}
+
+.wrapper{
+   width: 850px;
+   height: auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+  display: flex;
+}
+
+.wrapper .profile{
+   width: 400px;
+   margin-right: 25px;
+}
+
+.wrapper .profile .profile_img_info{
+   display: flex;
+   background: #fff;
+   border-radius: 10px;
+   margin-bottom: 25px;
+   box-shadow: 0 1px 2px rgba(0,0,0,0.125);
+}
+
+.wrapper .profile .profile_img_info .img{
+  width: 125px;
+}
+
+.wrapper .profile .profile_img_info .img img{
+  width: 100%;
+  display: block;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.wrapper .profile .profile_img_info .info{
+    width: calc(100% - 125px);
+    padding: 40px;
+}
+
+.wrapper .profile .profile_img_info .info .name{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.wrapper .profile .profile_img_info .place{
+    font-weight: 300;
+}
+
+.wrapper .profile .profile_skills{
+  background: #fff;
+  border-radius: 10px;
+  padding: 90px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.125);
+}
+
+.wrapper .profile .profile_skills .skills{
+  padding-bottom: 90px;
+  border-bottom: 1px solid #cccccc;
+  
+}
+
+.wrapper .profile .profile_skills .skills p{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.wrapper .profile .profile_skills .skills ul li{
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.wrapper .profile .profile_skills .skills ul li .fab{
+  width: 200px;
+}
+
+.wrapper .profile .profile_skills .tags_wrap{
+  padding-top: 20px;
+}
+
+.wrapper .profile .profile_skills .tags_wrap span.tag{
+  background: #e4e9ef;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.wrapper .profile_counts{
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  width: 175px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.125);
+}
+
+.wrapper .profile_counts .profile_counts_wrap{
+  padding: 30px 0;
+  border-bottom: 1px solid #cccccc;
+}
+.wrapper .profile_counts .profile_counts_wrap:first-child{
+  padding-top: 0;
+}
+.wrapper .profile_counts .profile_counts_wrap:last-child{
+  padding-bottom: 0px;
+  border-bottom: 0px;
+}
+
+.wrapper .profile_counts .profile_counts_wrap .item{
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.wrapper .profile_counts .profile_counts_wrap .item:hover{
+  background: #e4e9ef;
+}
+
+.wrapper .profile_counts .profile_counts_wrap .item .fas{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.wrapper .profile_counts .profile_counts_wrap .item .title{
+  font-size: 14px;
+}
+
+/* graphics  */
+
+*,* ::before, *::after{
+    box-sizing:border-box;
+}
+html{
+    height: 300%;
+    width: 100%;
+}
+/* body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: table;
+    margin: 0;
+} */
+.container{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: table-cell;
+    /* horizontal-align:middle; */
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%; */
+    /* margin-right: -50%; */
+    /* transform: translate(-50%, -50%) */
+}
+.container:first-of-type{
+    background-color:#3b4fff ;
+}
+.container:first-of-type .rail{
+   stroke:white ;
+}
+.container:first-of-type .progress{
+    stroke:#e21313 ;
+}
+.container:first-of-type .percentage{
+    stroke:#101010 ;
+}
+.container:nth-last-of-type(2){
+    background-color: #ed5752;
+}
+.container:nth-last-of-type(2) .rail{
+    stroke:white;
+}
+.container:nth-last-of-type(2) .progress{
+    stroke:purple;
+}
+.container:nth-last-of-type(3){
+    background-color: #52e8ed;
+}
+.container:nth-last-of-type(3) .rail{
+    stroke:salmon;
+}
+.container:nth-last-of-type(3) .progress{
+    stroke:slateblue;
+}
+.container:nth-last-of-type(1){
+    background-color: #ed52e5de;
+}
+.container:nth-last-of-type(1) .rail{
+    stroke:springgreen;
+}
+.container:nth-last-of-type(1) .progress{
+    stroke:yellow;
+}
+.gauge-container{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+.gauge-container .gauge{
+    position: relative;
+    display: block;
+}
+.gauge-container .gauge circle{
+    stroke-width:15;
+}
+.gauge-container .gauge .rail{
+    fill: transparent;
+}
+.gauge-container .center{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight:300;
+    color:white
+
+}
+.gauge-container .center.percentage{
+    font-size: 12px;
+}
+.gauge-container .center.percentageSymbol{
+    font-size: 12px;
+}
+.gauge-container .center .value{
+    font-size: 10px;
+}
+span.value{
+    color: #333;
+    font-weight:bold;
+}
+.side-nav{
+    float: left;
+    margin-right: 0mm;
+}
+/* Pop up buttons /*
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
